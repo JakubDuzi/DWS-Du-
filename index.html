@@ -7,28 +7,56 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <button id="alertButton">Tlačítko pro alert</button>
+    <div class="container">
+        <div class="section">
+            <button id="alertButton">Tlačítko pro alert</button>
+            <button id="textChangeButton">Tlačítko pro změnu textu</button>
+            <p id="text">Původní text.</p>
+            <button id="changeTextButton">Změň text</button>
+        </div>
 
-    <button id="textChangeButton">Tlačítko pro změnu textu</button>
+        <div class="section">
+            <button id="writeTextButton">Vypiš text</button>
+            <p id="outputText"></p>
 
-    <p id="text">Původní text.</p>
-    <button id="changeTextButton">Změň text</button>
+            <label for="nameInput">Zadej své jméno:</label>
+            <input type="text" id="nameInput" placeholder="Jméno">
+            <button id="greetButton">Pozdrav</button>
+        </div>
 
-    <button id="writeTextButton">Vypiš text</button>
-    <p id="outputText"></p>
+        <div class="section">
+            <p id="hoverText">Přejeď přeze mne myší.</p>
+            <button id="showTimeButton">Zobrazit čas</button>
+            <p id="timeOutput"></p>
+            <button id="showDateButton">Zobrazit datum</button>
+            <p id="dateOutput"></p>
+        </div>
 
-    <label for="nameInput">Zadej své jméno:</label>
-    <input type="text" id="nameInput" placeholder="Jméno">
-    <button id="greetButton">Pozdrav</button>
+        <div class="section">
+            <label for="numberInput">Zadej číslo:</label>
+            <input type="number" id="numberInput">
+            <button id="addThreeButton">Přičti 3</button>
+            <p id="addThreeOutput"></p>
 
-    <p id="hoverText">Přejeď přeze mne myší.</p>
+            <label for="firstNumber">První číslo:</label>
+            <input type="number" id="firstNumber">
+            <label for="secondNumber">Druhé číslo:</label>
+            <input type="number" id="secondNumber">
+            <button id="sumButton">Sečti čísla</button>
+            <p id="sumOutput"></p>
+        </div>
 
-    <button id="showTimeButton">Zobrazit čas</button>
-    <p id="timeOutput"></p>
+        <div class="section">
+            <img id="hoverImage" src="https://via.placeholder.com/150" alt="Placeholder obrázek">
+        </div>
 
-    <button id="showDateButton">Zobrazit datum</button>
-    <p id="dateOutput"></p>
+        <div class="section">
+            <label for="taskInput">Přidej úkol:</label>
+            <input type="text" id="taskInput" placeholder="Nový úkol">
+            <button id="addTaskButton">Přidat úkol</button>
+            <ul id="taskList"></ul>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

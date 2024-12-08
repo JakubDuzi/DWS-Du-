@@ -53,3 +53,55 @@ showDateButton.addEventListener('click', function() {
     const today = new Date();
     dateOutput.innerText = `Datum: ${today.toLocaleDateString()}`;
 });
+
+const numberInput = document.getElementById('numberInput');
+const addThreeButton = document.getElementById('addThreeButton');
+const addThreeOutput = document.getElementById('addThreeOutput');
+
+addThreeButton.addEventListener('click', function() {
+    const number = parseInt(numberInput.value, 10) || 0;
+    const result = number + 3;
+    addThreeOutput.innerText = `Výsledek: ${result}`;
+});
+
+const firstNumber = document.getElementById('firstNumber');
+const secondNumber = document.getElementById('secondNumber');
+const sumButton = document.getElementById('sumButton');
+const sumOutput = document.getElementById('sumOutput');
+
+sumButton.addEventListener('click', function() {
+    const num1 = parseInt(firstNumber.value, 10) || 0;
+    const num2 = parseInt(secondNumber.value, 10) || 0;
+    const result = num1 + num2;
+    sumOutput.innerText = `Součet: ${result}`;
+});
+
+const hoverImage = document.getElementById('hoverImage');
+
+hoverImage.addEventListener('mouseover', function() {
+    hoverImage.style.transform = 'scale(1.5)';
+    hoverImage.style.transition = 'transform 0.3s ease';
+});
+
+hoverImage.addEventListener('mouseout', function() {
+    hoverImage.style.transform = 'scale(1)';
+});
+
+const taskInput = document.getElementById('taskInput');
+const addTaskButton = document.getElementById('addTaskButton');
+const taskList = document.getElementById('taskList');
+
+addTaskButton.addEventListener('click', function() {
+    const taskText = taskInput.value.trim();
+    if (taskText) {
+        const taskItem = document.createElement('li');
+        taskItem.innerText = taskText;
+
+        taskItem.addEventListener('click', function() {
+            taskList.removeChild(taskItem);
+        });
+
+        taskList.appendChild(taskItem);
+        taskInput.value = ''; 
+    }
+});
